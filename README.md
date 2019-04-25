@@ -3,7 +3,7 @@ Python project to show collapsable and non collapsable text
 ## Installation
 Python3
 create a env 
-nstall requirements
+install requirements
 ```pip install -r requirements.txt```
 
 ## Running the code
