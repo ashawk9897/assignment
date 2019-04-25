@@ -4,12 +4,12 @@ Python project to show collapsable and non collapsable text
 Python3
 create a env 
 nstall requirements
-'''pip install -r requirements.txt'''
+```pip install -r requirements.txt```
 
-##Running the code
+## Running the code
 From the project run 
-'''python manage.py runserver'''
+```python manage.py runserver```
 Open Url
-'''http://localhost/collapse/'''
+```http://localhost/collapse/```
 
 
