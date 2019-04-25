@@ -18,5 +18,5 @@ from django.urls import path
 from collapse import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('collapse/', views.collapse,name='collapse'),
+    path('', views.collapse,name='collapse'),
 ]
