@@ -5,7 +5,7 @@ def collapse(request):
     modified_text=''
     template = 'index.html'
     file=''
-
+    mt_array=[]
     if request.method=='POST':
         try:
             file = request.FILES['file']
@@ -83,3 +83,10 @@ def indent_finder(text, previous_text, indenter):
         previous_text = text
 
     return [modified_text, previous_text]
+
+def jsview(request):
+    modified_text = ''
+    template = 'indexjs.html'
+    file = ''
+    mt_array=[]
+    return render(request, template_name=template, context={'modified_text': mt_array, 'file': file})

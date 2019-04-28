@@ -19,4 +19,5 @@ from collapse import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.collapse,name='collapse'),
+    path('js', views.jsview,name='jsview'),
 ]
