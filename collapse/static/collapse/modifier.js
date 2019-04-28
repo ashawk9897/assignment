@@ -6,6 +6,11 @@ function modifier()
 {
    var output= document.querySelector("#indent p");
    console.log(output)
+    star_array=[0]
+    previous_line = ''
+    mt_array = []
+    output.innerHTML = "";
+    output.style.color="black"
     input = document.getElementById('fileToLoad');
     if (!input.files) {
       alert("This browser doesn't seem to support the `files` property of file inputs.");
@@ -16,6 +21,7 @@ function modifier()
       reader = new FileReader();
       reader.onload = function(progressEvent){
         var lines = this.result.split('\n');
+        console.log(lines.length)
         for(var line = 0; line < lines.length; line++){
               //console.log(lines[line]);
             if (lines[line].trim().length==0)
@@ -42,10 +48,17 @@ function modifier()
                     previous_line=indent_line[1]
                     output.innerHTML+= indent_line[0]
                     }
+
             else{
+                try{
                 previous_line_len=previous_line.match(/^(\.+)/)[1].length
                 previous_line = previous_line+'\n'+' '.repeat(previous_line_len+3) + lines[line]
-                continue
+                continue}
+                catch {
+                    output.innerHTML+="Oops, Please upload a valid text file";
+                    output.style.color="red"
+                    break;
+                }
                 }
         }
         if (previous_line){
