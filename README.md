@@ -12,8 +12,12 @@ From the project run
 
 ```python manage.py runserver```
 
-Open Url
+Open Url:Python logic
 
 ```http://localhost:8000```
+
+Open Url:Javascript logic
+
+```http://localhost:8000/js```
 
 
